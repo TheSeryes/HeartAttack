@@ -22,8 +22,7 @@ class CustomView extends View {
 
     private Triangle triangle1 = new Triangle();
     protected Forms polygones = new Forms();
-
-
+    protected  Circle circle = new Circle();
 
 
 
@@ -64,6 +63,10 @@ class CustomView extends View {
         polygones.setColor(color);
         polygones.setSize(size);
         polygones.setSides(6);
+
+        circle.setColor(color);
+        circle.setSize(size);
+        circle.setRadius(size);
     }
 
     public void setColor(int color)
@@ -93,18 +96,20 @@ class CustomView extends View {
 
         polygones.setX(cx);
         polygones.setY(cy);
+
+        circle.setY(cx);
+        circle.setY(cy);
     }
 
     @Override
     protected void onDraw(Canvas canvas)
     {
-        polygones.draw(canvas);
+        //polygones.draw(canvas);
+        circle.draw(canvas);
     }
 
     @Override
     public void setRotation(float rotation)
     {
-        super.setRotation(rotation);
-
     }
 }
